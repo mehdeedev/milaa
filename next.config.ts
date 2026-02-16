@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [new URL('https://cdn.kavan.tech/**')],
+  },
+  devIndicators: false
 };
 
 export default nextConfig;
