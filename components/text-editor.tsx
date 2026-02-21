@@ -26,6 +26,7 @@ import {
   Heading4,
 } from "lucide-react";
 import { useEffect } from "react";
+import { useMediaStore } from "@/store/media.store";
 
 type Props = {
   content: string;
@@ -33,6 +34,7 @@ type Props = {
 };
 
 export default function TextEditor({ content, onChange }: Props) {
+  const { openMediaDialog } = useMediaStore();
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -225,10 +227,12 @@ export default function TextEditor({ content, onChange }: Props) {
         </button>
 
         <button
-          onClick={() => {
-            const url = prompt("Image URL");
-            if (url) {
-              editor.chain().focus().setImage({ src: url }).run();
+          onClick={async (e) => {
+             e.stopPropagation();
+            e.preventDefault();
+            const res = await openMediaDialog({ root: '' });
+            if (res.item) {
+              editor.chain().focus().setImage({ src: res.item.url, alt: res.alt || '' }).run();
             }
           }}
           className="rounded p-2 hover:bg-gray-100"

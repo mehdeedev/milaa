@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { yekan } from "@/lib/fonts";
+import { pinar, yekan } from "@/lib/fonts";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa">
-      <body dir="rtl" className={yekan.className}>
+    <html lang="fa" className={`${yekan.variable} ${pinar.variable}`}>
+      <body dir="rtl" className="font-yekan">
         {children}
 
         <Toaster />

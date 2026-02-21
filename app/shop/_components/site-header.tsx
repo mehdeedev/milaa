@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 import { useCart } from "@/hooks/use-cart";
 import { authClient } from "@/lib/auth-client";
 import { useCartStore } from "@/store/cart.store";
@@ -23,9 +24,17 @@ export function SiteHeader() {
   }, [session]);
 
   return (
-    <header className="bg-white flex items-center justify-center shadow shadow-gray-150 ">
-      <div className="w-6xl max-w-full flex px-5 items-center justify-between">
-        <Image alt="logo" src={"/milaaplan-logo.png"} width={80} height={80} />
+    <header className="bg-white flex items-center justify-center shadow shadow-gray-150 px-5">
+      <div className="w-6xl max-w-full flex items-center justify-between">
+        <div className="relative w-16 h-16 md:w-20 md:h-20">
+          <Image
+            alt="logo"
+            src={"/milaaplan-logo.png"}
+            className="w-full h-full"
+            width={80}
+            height={80}
+          />
+        </div>
 
         <div className="flex items-center text-gray-700 gap-10 lg:gap-15">
           <nav className="items-center gap-15 hidden lg:flex">
@@ -47,7 +56,8 @@ export function SiteHeader() {
             </div>
           </Link>
           <div className="lg:hidden">
-            <MenuIcon />
+            {/* <MenuIcon /> */}
+            <SidebarTrigger />
           </div>
         </div>
       </div>

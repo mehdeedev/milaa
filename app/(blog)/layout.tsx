@@ -1,5 +1,4 @@
 import { SiteFooter, SiteHeader } from "@/app/shop/_components";
-import { AppSidebar } from "@/components/app-sidebar";
 import { ShopSidebar } from "@/components/shop-sidebar";
 import { SidebarProvider } from "@/components/ui/sidebar";
 

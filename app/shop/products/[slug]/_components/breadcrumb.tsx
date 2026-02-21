@@ -28,7 +28,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
           {item.href ? (
             <Link href={item.href}>{item.label}</Link>
 
-          ) : {item.label}}
+          ) : <>{item.label}</>}
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />

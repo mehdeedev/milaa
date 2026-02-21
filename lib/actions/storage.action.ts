@@ -9,7 +9,6 @@ export async function uploadImagesAction(
 ): Promise<ActionResultType<string[]>> {
   const files = formData.getAll("images") as File[];
   const directory = formData.get("directory") as string;
-  debugger;
 
   if (!files.length) {
     return { success: false, errorMessage: "No images provided" };

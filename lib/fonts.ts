@@ -18,6 +18,23 @@ const yekan = localFont({
       weight: "600",
     },
   ],
+  variable: '--font-yekan'
 });
 
-export { yekan };
+const pinar = localFont({
+  src: [
+    {
+      path: "../public/fonts/pinar.ttf",
+      style: "normal",
+      weight: "200",
+    },
+    {
+      path: "../public/fonts/pinar.ttf",
+      style: "bold",
+      weight: "700",
+    },
+  ],
+  variable: '--font-pinar'
+})
+
+export { yekan, pinar };
