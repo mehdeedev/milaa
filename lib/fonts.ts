@@ -24,12 +24,12 @@ const yekan = localFont({
 const pinar = localFont({
   src: [
     {
-      path: "../public/fonts/pinar.ttf",
+      path: "../public/fonts/Pinar.ttf",
       style: "normal",
       weight: "200",
     },
     {
-      path: "../public/fonts/pinar.ttf",
+      path: "../public/fonts/Pinar.ttf",
       style: "bold",
       weight: "700",
     },
