@@ -4,13 +4,13 @@ import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 export default async function Page() {
-  const session = await auth.api.getSession({
-    headers: await headers()
-  })
+  // const session = await auth.api.getSession({
+  //   headers: await headers()
+  // })
 
-  if (!session) {
-    redirect("/vorood");
-  }
+  // if (!session) {
+  //   redirect("/vorood");
+  // }
 
   return (
     <>

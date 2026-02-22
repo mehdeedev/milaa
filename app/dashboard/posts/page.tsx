@@ -13,18 +13,6 @@ import { columns, Payment } from "@/app/dashboard/products/columns";
 import Link from "next/link";
 import { formatPriceWithCommas } from "@/lib/utils";
 
-// async function getData(): Promise<Payment[]> {
-//   // Fetch data from your API here.
-//   return [
-//     {
-//       id: "728ed52f",
-//       amount: 100,
-//       status: "pending",
-//       email: "m@example.com",
-//     },
-//     // ...
-//   ];
-// }
 
 export default async function PostsPage() {
 //   const data = await getData();
