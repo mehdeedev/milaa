@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CreatePostInput } from "@/lib/schema/post.schema";
 import dynamic from "next/dynamic";
